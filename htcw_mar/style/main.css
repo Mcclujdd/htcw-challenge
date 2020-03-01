@@ -1,0 +1,17 @@
+html{
+  background-color: yellow;
+}
+
+table{
+  width: 100%;
+  border: 2px solid black;
+  table-layout: auto;
+  empty-cells: show;
+}
+
+tr, th{
+  width: inherit;
+  border: inherit;
+  table-layout: inherit;
+  empty-cells: inherit
+}
