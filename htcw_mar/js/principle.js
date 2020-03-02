@@ -67,7 +67,7 @@ var creatureObjects = [
   snake,
   riverTroll,
 ];
-function randoCreName(){
+function randoCreature(){
   var n = creatureObjects[Math.ceil(Math.random()*(creatureObjects.length-1))];
   return n;
 };
@@ -77,9 +77,9 @@ var i;
   for (i=0; i <=100; i++){
     document.write("<tr>");
       document.write("<td>"+"</td>");
-      document.write("<td>"+ randoCreName().type + "</td>");
-      document.write("<td>"+ randoCreName().strength() +"</td>");
-      document.write("<td>"+ randoCreName().health() +"</td>");
+      document.write("<td>"+ randoCreature().type + "</td>");
+      document.write("<td>"+ randoCreature().strength() +"</td>");
+      document.write("<td>"+ randoCreature().health() +"</td>");
       document.write("<td>"+"</td>");
       document.write("<td>"+"</td>");
     document.write("</tr>");
@@ -87,4 +87,4 @@ var i;
 };
 
 
-console.log(randoCreName().type + " " + randoCreName().health());
+console.log(randoCreature().type + " " + randoCreature().health());
