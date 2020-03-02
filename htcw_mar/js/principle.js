@@ -14,7 +14,6 @@ var witch = {
     this.strMin= Math.ceil(this.strMin)
     return Math.floor(Math.random() * (this.strMax-this.strMin)+this.strMin)}
   };
-
 var dragon = {
   type:"Dragon",
   strMin:80,
@@ -61,5 +60,31 @@ var riverTroll = {
     return Math.floor(Math.random() * (this.strMax-this.strMin)+this.strMin)}
 };
 
+var creatureObjects = [
+  null,
+  witch,
+  dragon,
+  snake,
+  riverTroll,
+];
+function randoCreName(){
+  var n = creatureObjects[Math.ceil(Math.random()*(creatureObjects.length-1))];
+  return n;
+};
 
-console.log(witch.strength());
+function fillTable(){
+var i;
+  for (i=0; i <=100; i++){
+    document.write("<tr>");
+      document.write("<td>"+"</td>");
+      document.write("<td>"+ randoCreName().type + "</td>");
+      document.write("<td>"+ randoCreName().strength() +"</td>");
+      document.write("<td>"+ randoCreName().health() +"</td>");
+      document.write("<td>"+"</td>");
+      document.write("<td>"+"</td>");
+    document.write("</tr>");
+  };
+};
+
+
+console.log(randoCreName().type + " " + randoCreName().health());
