@@ -72,6 +72,11 @@ function randoCreature(){
   return n;
 };
 
+function healthModifier(){
+ var c = document.getElementById('myTR').children;
+ c[3].innerHTML(c[3]+1);
+};
+
 function fillTable(){
 var i;
   for (i=0; i <=100; i++){
@@ -81,10 +86,8 @@ var i;
       document.write("<td>"+ randoCreature().strength() +"</td>");
       document.write("<td>"+ randoCreature().health() +"</td>");
       document.write("<td>"+"</td>");
-      document.write("<td>"+"</td>");
+      document.write("<td><button class=plusH onclick=healthModifier()>+</button></td>");
     document.write("</tr>");
   };
 };
-
-
-console.log(randoCreature().type + " " + randoCreature().health());
+console.log(healthModifier().c)
