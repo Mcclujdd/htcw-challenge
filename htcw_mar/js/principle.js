@@ -1,4 +1,4 @@
-
+//objects created for creatures with random health and strength function methods
 var witch = {
   type:"Witch",
   strMin:60,
@@ -72,6 +72,22 @@ function randoCreature(){
   return n;
 };
 
+/* trying to reference the health cell data and add 1 for use with buttons
+function healthModifier(){
+ var c = document.getElementById('myTR').children;
+ return c[3].innerHTML = (c[3]+1);
+};*/
+
+// reference i from fillTable() loop to get the post-populated tr/td data?
+/*var healthValue = document.getElementById('myTable').rows.cells;
+function healthPlus() {
+    healthValue[3].innerHTML += 1;
+return healthValue
+};*/
+
+/*fills out the table with 100 rows of random creatures and their stats.
+Struggling to reference row[current] so I can modify values with onclick.
+*/
 function fillTable(){
 var i;
   for (i=0; i <=100; i++){
@@ -81,10 +97,9 @@ var i;
       document.write("<td>"+ randoCreature().strength() +"</td>");
       document.write("<td>"+ randoCreature().health() +"</td>");
       document.write("<td>"+"</td>");
-      document.write("<td>"+"</td>");
+      document.write
+          ("<td><button class=plusH onclick=healthPlus()>+</button>"+
+          "<button class=minusH onclick=healthModifier()>-</button></td>");
     document.write("</tr>");
   };
 };
-
-
-console.log(randoCreature().type + " " + randoCreature().health());

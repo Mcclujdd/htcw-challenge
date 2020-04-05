@@ -5,6 +5,7 @@ html{
 table, th, tr{
   width: 100%;
   border: 2px solid black;
+  border-radius:20%;
   table-layout: auto;
   empty-cells: show;
   border-collapse:collapse;
